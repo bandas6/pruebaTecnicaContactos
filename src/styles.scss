@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@media (max-width: 991.98px) {
+
+    .filtros {
+
+        .campos {
+
+            width: 90%;
+            margin: auto;
+            flex-wrap: wrap;
+            row-gap: 8px;
+
+            .botonAgregar {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                position: relative;
+                left: 40%;
+                top: -2.9rem !important;
+            }
+        }
+    }
+
+    .contenedorAgregar {
+
+        .campos {
+
+            width: 90%;
+            margin: auto;
+            flex-wrap: wrap;
+            row-gap: 8px;
+
+            .botonAgregar {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                position: relative;
+                left: 40%;
+                top: -2.9rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .filtros {
+        width: auto !important;
+
+        .campos {
+
+            .campo {
+                width: 100% !important;
+            }
+
+            .botonAgregar {
+                all: unset !important;
+            }
+        }
+    }
+
+    .contenedorAgregar {
+        form {
+            width: auto !important;
+
+            .campos {
+
+                .campo {
+                    width: 100% !important;
+                }
+
+                .botonAgregar {
+                    all: unset !important;
+                }
+            }
+        }
+    }
+
+}

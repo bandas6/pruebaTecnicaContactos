@@ -1,0 +1,76 @@
+<div class="contenedor">
+    <div class="contenedorAgregar">
+        <div class="titulo">
+            <h1>Contactos</h1>
+        </div>
+        <form action="" [formGroup]="formularioContacto">
+            @if(!modoEdicion){
+                <div class="tituloContactos">
+                    <h2>Agregar Nuevo Contacto</h2>
+                </div>
+            }@else {
+                <div class="tituloContactos">
+                    <h2>Editando Contacto</h2>
+                </div>
+            }
+            <div class="campos">
+                <div class="campo nombre">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" formControlName="nombre">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Entidad:</label>
+                    <input type="text" id="nombre" name="nombre" formControlName="entidad">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Email:</label>
+                    <input type="text" id="nombre" name="nombre" formControlName="email">
+                </div>
+                @if(!modoEdicion){
+                    <div class="botonAgregar">
+                        <button class="boton agregar" (click)="agregarContacto()">Agregar</button>
+                    </div>
+                }@else {
+                    <div class="botonAgregar">
+                        <button class="boton agregar" (click)="editarContacto()">Editar</button>
+                    </div>
+                }
+            </div>
+            @if(mensajeError){
+                <div class="error">
+                    <p>Campos vacios, por favor diligencie todos los campos del formulario.</p>
+                </div>
+            }
+        </form>
+    </div>
+
+    <app-filtros (filtros)="filtrar($event)"></app-filtros>
+
+    <div class="contenedorTabla">
+        <div class="titulosLista">
+            <div class="titulo nombre">Nombre</div>
+            <div class="titulo entidad">Entidad</div>
+            <div class="titulo email">Email</div>
+        </div>
+        <div class="listaContactos">
+            <div class="contacto" *ngFor="let contacto of contactos">
+                <div class="titulo tituloMobile">Nombre:</div>
+                <div class="nombre">{{ contacto.nombre }}</div>
+                <div class="titulo tituloMobile">Entidad:</div>
+                <div class="entidad">{{ contacto.entidad }}</div>
+                <div class="titulo tituloMobile">Email:</div>
+                <div class="email">{{ contacto.email }}</div>
+                <div class="contenedorEditar" (click)="seleccionarContactoEditar(contacto)">
+                    <button class="boton editar">Editar</button>
+                </div>
+                <div class="contenedorBorrar">
+                    <div class="boton borrar" (click)="borrarContacto(contacto)">
+                        <img src="../../assets/imgs/xmark-solid (1).svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

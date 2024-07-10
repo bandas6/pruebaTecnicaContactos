@@ -1,0 +1,27 @@
+<div class="contenedor">
+    <div class="filtros">
+        <h2>Filtros</h2>
+        <form action="" [formGroup]="formularioFiltros">
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" (keyup)="filtrar()" formControlName="nombre">
+                </div>  
+                <div class="campo">
+                    <label for="nombre">Entidad:</label>
+                    <input type="text" id="nombre" name="nombre" (keyup)="filtrar()" formControlName="entidad">
+                </div> 
+                <div class="campo">
+                    <label for="nombre">Email:</label>
+                    <input type="text" id="nombre" name="nombre" (keyup)="filtrar()" formControlName="email">
+                </div>
+                <div class="botonAgregar">
+                    <button class="boton agregar" (click)="limpiarFiltros()">Limpiar</button>
+                </div>
+            </div>
+            <!-- <div class="botonAgregarMobil">
+                <button class="boton agregar" (click)="limpiarFiltros()">Limpiar</button>
+            </div> -->
+        </form>
+    </div>
+</div>

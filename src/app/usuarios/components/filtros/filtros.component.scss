@@ -1,0 +1,37 @@
+.filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #bfbebe;
+    width: 100%;
+    margin: auto;
+    max-width: 1240px;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    h2 {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .campos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        column-gap: 35px;
+
+        .campo {
+            width: 34%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .botonAgregar {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+}

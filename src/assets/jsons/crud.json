@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "nombre": "Andrea",
+      "entidad": "Juridico",
+      "email": "andresGomes@gmail.com",
+      "id": "1"
+    },
+    {
+      "nombre": "Daniel",
+      "entidad": "Entidad",
+      "email": "Ricardo@gmail.com",
+      "id": "2"
+    },
+    {
+      "nombre": "Lozano",
+      "entidad": "preuba",
+      "email": "lozano@gmail.com",
+      "id": "72bd"
+    }
+  ]
+}

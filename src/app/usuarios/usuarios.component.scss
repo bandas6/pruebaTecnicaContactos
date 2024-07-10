@@ -1,0 +1,192 @@
+.contenedor {
+    width: 80%;
+    margin: auto;
+    max-width: 1240px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        border: 1px solid #bfbebe;
+        width: 100%;
+        margin: auto;
+        max-width: 1240px;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+
+        .tituloContactos {
+            h2 {
+                margin: 0;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .campos {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            column-gap: 35px;
+
+            .campo {
+                width: 34%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .botonAgregar {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+            }
+        }
+    }
+
+    .contenedorTabla {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #bfbebe;
+        width: 100%;
+        margin: auto;
+        max-width: 1240px;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+
+        .titulosLista {
+            display: flex;
+
+            .titulo {
+                font-weight: bold;
+            }
+
+            .nombre {
+                width: 21%;
+            }
+
+            .entidad {
+                width: 27%;
+            }
+
+            .email {
+                width: 27%;
+            }
+        }
+
+        .listaContactos {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 1rem;
+
+            .contacto {
+                display: flex;
+
+                .tituloMobile{
+                    display: none;
+                }
+
+                .nombre {
+                    width: 21%;
+                }
+
+                .entidad {
+                    width: 27%;
+                }
+
+                .email {
+                    width: 27%;
+                }
+
+                .contenedorEditar {
+                    width: 18%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                }
+
+                .contenedorBorrar {
+                    width: 7%;
+                    display: flex;
+                    justify-content: end;
+
+                    .borrar {
+                        width: 100%;
+                        height: 20px;
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+
+                        img {
+                            width: max-content;
+                            height: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) { 
+    .entidad {
+        width: 21% !important; 
+    }
+
+    .email {
+        width: 32% !important;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .contenedorTabla{
+        width: auto !important;
+    }
+    .contenedor{
+        
+        .titulosLista{
+            display: none !important;
+        }
+
+        .tituloMobile{
+            display: initial !important;
+        }
+
+        .listaContactos{
+            .contacto {
+                display: grid !important;
+                width: 90%;
+                grid-template-columns: 31% 65%;
+                gap: 10px;
+                padding: 2rem 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: auto;
+                border: 1px solid #bbbbbb;
+                background: #f3f3f3;
+                border-radius: 1rem;
+                .tituloMobile {
+                    display: flex !important;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 50%;
+                }
+            }
+        }
+    } 
+    .contenedorBorrar {
+        width: 97% !important;
+        display: flex;
+        justify-content: end;
+    }
+
+    .contenedorEditar {
+        width: 100% !important;
+        .editar{
+            width: 100% !important;
+        }
+    }
+
+}
+
